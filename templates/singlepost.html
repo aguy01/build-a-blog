@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<br>
+<section>
+   <div class="post">
+       <em>Blog was added on:</em>{{post.created.strftime("%b %d, %Y")}}
+       <p></p>
+       <div class="post-title">{{post.subject}}</div>
+       <pre class="post-content">{{post.content}}</pre>
+       <hr>
+   </div>
+</section>
+{% endblock %}

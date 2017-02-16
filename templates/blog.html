@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for post in posts %}
+<br>
+<section>
+   <div class="post">
+       <em>Blog was added on:</em>{{post.created.strftime("%b %d, %Y")}}
+       <p></p>
+       <div class="post-title"><a href="/blog/{{post.key().id()}}">{{post.subject}}</a></div>
+       <pre class="post-content">{{post.content}}</pre>
+       <hr>
+   </div>
+</section>
+{% endfor %}
+
+{% endblock %}
